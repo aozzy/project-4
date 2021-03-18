@@ -46,7 +46,7 @@ export default function ItemForm({ formData, handleSubmit, handleChange, updateF
   return <div className="section">
     <div className="container">
 
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form update-form" onSubmit={handleSubmit}>
 
         <div className="field">
           <label className="label">Item Name</label>
