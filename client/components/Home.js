@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import Carousel from './Carousel'
 
 const debouncedSave = debounce((query, updateSearchResults) => {
-  axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?country=gb&access_token=${process.env.MAPBOX_TOKEN}`)
+  axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?country=gb&access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`)
     .then(({ data }) => {
       const search = data.features.map(location => {
         return {
@@ -114,7 +114,7 @@ export default function Home({ history }) {
   }
 
   console.log(userTown)
-
+  console.log('hello')
   return <div className="main">
 
     <section className="hero hero-background" style={{ backgroundImage: 'url(https://i.imgur.com/R8agYgr.png)', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%' }}>
@@ -256,31 +256,31 @@ export default function Home({ history }) {
 
             <div className="column is-6">
               <div className="container-welcome">
-              <div className="main-title-text has-text-centered">
-                <p className="large-home-title">Welcome to <span style={{ color: '#B24231', fontFamily: 'Mouse Memoirs', fontSize: '80px' }}>Baggle!</span></p>
-              </div>
-
-              
-                <div className="content px-4">
-                <p className="homepage-copy">We're is bringing back the age-old art of bartering - saving you money and helping you connect with your community.</p>
-              <p className="homepage-copy">With Baggle, you can find all the things you love, for free! Come and join our thriving group of Bagglers to make swaps and make friends!</p>
+                <div className="main-title-text has-text-centered">
+                  <p className="large-home-title">Welcome to <span style={{ color: '#B24231', fontFamily: 'Mouse Memoirs', fontSize: '80px' }}>Baggle!</span></p>
                 </div>
-             
-            </div>
-          </div>
 
-          <div className="column is-3">
-            <div className="home-image-container">
-              <img src="https://i.imgur.com/scvXmVz.png" />
-              <img src="https://i.imgur.com/fDkEjlD.png" className="home-image-right" />
+
+                <div className="content px-4">
+                  <p className="homepage-copy">We're is bringing back the age-old art of bartering - saving you money and helping you connect with your community.</p>
+                  <p className="homepage-copy">With Baggle, you can find all the things you love, for free! Come and join our thriving group of Bagglers to make swaps and make friends!</p>
+                </div>
+
+              </div>
             </div>
-            <div className="card">
+
+            <div className="column is-3">
+              <div className="home-image-container">
+                <img src="https://i.imgur.com/scvXmVz.png" />
+                <img src="https://i.imgur.com/fDkEjlD.png" className="home-image-right" />
+              </div>
+              <div className="card">
                 <div className="card-content">
                   <p className="quote-text">How do I <span style={{ color: '#B24231', fontFamily: 'Mouse Memoirs', fontSize: '30px', fontWeight: 'normal' }}>Baggle?</span></p>
                   <p className="text">Browse the site for items and nearby Bagglers to find something you like. Then hit that Baggle Button! Just make you have something to Baggle!</p>
                 </div>
               </div>
-          </div>
+            </div>
           </div>
         </article>
       </div>

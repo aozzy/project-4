@@ -3,7 +3,7 @@ import axios from 'axios'
 import { debounce } from 'lodash'
 
 const debouncedSave = debounce((searchQuery, updateSearchResults) => {
-  axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${searchQuery}.json?country=gb&access_token=pk.eyJ1IjoidXJ1MzgiLCJhIjoiY2ttNnBveXQ2MHFnaDJ4anhtdmhnbHBmeSJ9.OWgGgvZU2cJlbxp-jAJh_g`)
+  axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${searchQuery}.json?country=gb&access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`)
     .then(({ data }) => {
       const search = data.features.map(location => {
         return {

@@ -7,7 +7,7 @@ import sortedItems from './sortItems'
 import Moment from 'react-moment'
 
 const debouncedSave = debounce((query, updateSearchResults) => {
-  axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?country=gb&access_token=${process.env.MAPBOX_TOKEN}`)
+  axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?country=gb&access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`)
     .then(({ data }) => {
       const search = data.features.map(location => {
         return {
