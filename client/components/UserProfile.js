@@ -172,7 +172,7 @@ export default function UserProfile({ match, history }) {
       return <div className="column is-one-third" key={i}>
         <Link to={`/items/${item.id}`}>
           <div 
-            className={item.offers.length > 0 ? 'card outlined' : 'card'}
+            className={(item.offer && item.offers.length > 0) ? 'card modal-individual-card outlined' : 'card modal-individual-card'}
           >
             <div className="card-image">
               <figure className="image is-square">
@@ -198,8 +198,7 @@ export default function UserProfile({ match, history }) {
       return <div className="column is-one-quarter" key={item.id}>
         <Link to={`/items/${item.id}`}>
           <div
-            className={item.offers.length > 0 ? 'card modal-individual-card outlined' : 'card modal-individual-card'}
-          >
+            className={(item.offer && item.offers.length > 0) ? 'card modal-individual-card outlined' : 'card modal-individual-card'}>
             <div className="card-image">
               <figure className="image is-4by3">
                 <img src={item.image} />

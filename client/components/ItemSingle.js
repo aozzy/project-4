@@ -92,7 +92,7 @@ export default function ItemSingle({ match, history }) {
     } catch (err) {
       console.log(err)
     }
-    // history.push('/items')
+    
     location.reload()
   }
 
@@ -101,8 +101,8 @@ export default function ItemSingle({ match, history }) {
 
   async function Swap(offeredItemid) {
     try {
-      console.log(offeredItemid)
-      console.log(itemid)
+      
+      
       const { data } = await axios.put(`/api/swap/${itemid}/${offeredItemid}`, {},
         { headers: { Authorization: `Bearer ${token}` } })
       updateItem(data)
@@ -110,7 +110,7 @@ export default function ItemSingle({ match, history }) {
       console.log(err)
     }
 
-    // history.push('/items')
+    
     location.reload()
   }
 

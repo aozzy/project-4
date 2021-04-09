@@ -7,7 +7,7 @@ from models.image import Image
 
 class Item(db.Model, BaseModel):
 
-    # * You need this __tablename__ field. It's used by SA.
+    
 
     __tablename__ = 'items'
     id = db.Column(db.Integer, primary_key=True)
