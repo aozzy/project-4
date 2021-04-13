@@ -18,6 +18,7 @@ For the final project of the General Assembly Software Immersive Course we were 
 to build a full stack application. The duration of the project was 9 days. After exchanging ideas
 for the project we choose to develop Baggle, The idea behind Baggle came from the story of [Kyle
 McDonald](https://www.cbc.ca/news/canada/from-paper-clip-to-house-in-14-trades-1.573973) who went from owning a paper clip to a house in 14 trades. We planned the project out by whiteboarding and wireframing. 
+The app has been deployed on Heroku and you can find it [here](https://gabaggle.herokuapp.com/)
 
 ![Whiteboard](./images/Wireframe.png)
 
