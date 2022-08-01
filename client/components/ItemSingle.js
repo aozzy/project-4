@@ -84,8 +84,7 @@ export default function ItemSingle({ match, history }) {
   async function Offer(offeredItemid) {
     try {
 
-      console.log(offeredItemid)
-      console.log(itemid)
+      
       const { data } = await axios.put(`/api/offers/${itemid}/${offeredItemid}`, {},
         { headers: { Authorization: `Bearer ${token}` } })
       updateItem(data)
@@ -237,7 +236,7 @@ export default function ItemSingle({ match, history }) {
         toggleOnWishlist(true)
         return
       } else {
-        console.log(itemid, wishItem.id)
+        // console.log(itemid, wishItem.id)
         // toggleOnWishlist(false)
       }
     })
@@ -308,7 +307,7 @@ export default function ItemSingle({ match, history }) {
   if (!item.owner) {
     return null
   }
-  console.log(offeredList)
+ 
 
   return <div className="container">
     <div className="columns">
