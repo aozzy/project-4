@@ -2,12 +2,8 @@
   "name": "project-4",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": "15.10.0"
-  },
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "npm install --dev",
     "start": "webpack-dev-server --mode=development",
     "seed": "pipenv run python server/seed.py",
     "build": "pipenv install; npm i; webpack -p",
