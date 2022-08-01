@@ -53,9 +53,6 @@
     "react-router-dom": "^5.2.0",
     "react-slick": "^0.28.1",
     "react-spinners": "^0.10.6",
-    "slick-carousel": "^1.8.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "slick-carousel": "^1.8.1"
   }
 }
