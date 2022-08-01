@@ -237,7 +237,7 @@ export default function ItemSingle({ match, history }) {
         toggleOnWishlist(true)
         return
       } else {
-        console.log(itemid, wishItem.id)
+        // console.log(itemid, wishItem.id)
         // toggleOnWishlist(false)
       }
     })
@@ -254,7 +254,7 @@ export default function ItemSingle({ match, history }) {
     const newWishlistedTotal = item.wishlisted + 1
     updateWishlisted(newWishlistedTotal)
     toggleOnWishlist(true)
-    console.log(newWishlistedTotal)
+    // console.log(newWishlistedTotal)
     try {
       await axios.put(`/api/items/${itemid}`, { wishlisted: `${newWishlistedTotal}` }, {
         headers: { Authorization: `Bearer ${token}` }
@@ -267,7 +267,7 @@ export default function ItemSingle({ match, history }) {
         {
           headers: { Authorization: `Bearer ${token}` }
         })
-      console.log('added to wishlist')
+      // console.log('added to wishlist')
     } catch (err) {
       console.log(err.response.data)
     }
@@ -308,7 +308,7 @@ export default function ItemSingle({ match, history }) {
   if (!item.owner) {
     return null
   }
-  console.log(offeredList)
+  
 
   return <div className="container">
     <div className="columns">

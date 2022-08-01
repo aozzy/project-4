@@ -70,15 +70,15 @@ export default function UserSignup({ history }) {
 
       const { data } = await axios.post('api/signup', newFormData)
       updateRegistrationSuccess(true)
-      console.log('signing up user')
+      // console.log('signing up user')
       history.push('/login')
     } catch (err) {
       console.log('ERROR!')
       console.log({ err })
     }
   }
-  console.log(formData)
-  console.log(errors)
+  // console.log(formData)
+  // console.log(errors)
 
   return <div className="main">
 

@@ -21,7 +21,7 @@ const debouncedSave = debounce((searchQuery, updateSearchResults) => {
 
 const inputFields = ['name', 'category', 'description', 'image', 'listed']
 
-console.log('hello')
+// console.log('hello')
 export default function ItemForm({ formData, handleSubmit, handleChange, updateFormData }) {
 
   // const [creationSuccess, updateCreationSuccess] = useState(false)

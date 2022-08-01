@@ -45,7 +45,7 @@ export default function Navbar( { history } ) {
     location.reload()
   }
 
-  console.log(userImage)
+  // console.log(userImage)
 
   return <div className="navbar" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
@@ -68,7 +68,7 @@ export default function Navbar( { history } ) {
         </div>
       </div>
 
-      {console.log(userId)}
+      {/* {console.log(userId)} */}
 
       {logIn ? <div className="navbar-end">
         <div className="navbar-item"><Avatar alt={userName} src={userImage} style={{ height: '50px', width: '30px' }}/></div>
