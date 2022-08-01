@@ -109,11 +109,12 @@ export default function Home({ history }) {
   }
 
   function swapPostings() {
-
+    console.log('postings swap')
     updatePostings(!postings)
   }
 
-  
+  console.log(userTown)
+  console.log('hello')
   return <div className="main">
 
     <section className="hero hero-background" style={{ backgroundImage: 'url(https://i.imgur.com/R8agYgr.png)', backgroundRepeat: 'no-repeat', backgroundSize: '100% 100%' }}>

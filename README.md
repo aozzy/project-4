@@ -4,7 +4,7 @@
 
 # Project-4 - Python, PostgreSQL, React and Flask Full Stack Application 
 
-# Baggle, an ecommerce site to trade items instead of money.
+# Baggle, an ecommerce site which uses items to trade instead of money.
 
 ### Created by  [Abdi](https://github.com/aozzy) ,[James](https://github.com/jamesNicholasRyan) & [Cathy](https://github.com/ketka82uk).
  
@@ -18,7 +18,6 @@ For the final project of the General Assembly Software Immersive Course we were 
 to build a full stack application. The duration of the project was 9 days. After exchanging ideas
 for the project we choose to develop Baggle, The idea behind Baggle came from the story of [Kyle
 McDonald](https://www.cbc.ca/news/canada/from-paper-clip-to-house-in-14-trades-1.573973) who went from owning a paper clip to a house in 14 trades. We planned the project out by whiteboarding and wireframing. 
-The app has been deployed on Heroku and you can find it [here](https://gabaggle.herokuapp.com/)
 
 ![Whiteboard](./images/Wireframe.png)
 
@@ -60,13 +59,8 @@ The app has been deployed on Heroku and you can find it [here](https://gabaggle.
 
 ## Baggle
 
-We began by planning out the core features of Baggle and identified what our MVP would look like and any functionality we could implement
-as a stretch goal. We planned how our models would look like, We identified early on that the key component of the site would be the trade system so we designed our model with this in mind. The Items model would have a many to many relationship with itself, this would enable us to keep track of items offered for other items and implement the swap system. 
-
-
-
-
-The user model would also have a many to many relationship
+We began by planning out the core features of Baggle and identified what our MVP would look like and any functionalitly we could implement
+as a strecth goal. We planned how our models would look like, We identified early on that the key component of the site would be the trade system so we designed our model with this in mind. The Items model would have a many to many releationship with itself, this would enable us to keep track of items offered for other items and implement the swap system. The user model would also have a many to many releationship
 with itself to allow followers for users.
 We wireframed out what the user story would look like before we began coding and also whiteboared out our models.
 We used our own API for the items and agreed on what the fields on the item data would consist of. After the planning stage we began
@@ -120,9 +114,9 @@ class Item(db.Model, BaseModel):
 
 
 
-After completing our MVC I started working on the swap system on the backend using insomnia to trade one item for another.
+After completeing our MVC I started working on the swap system on the backend using insomnia to trade one item for another.
 In the item schema we have owner, comments, offers and sale_item as nested fields. The owner field would be used in the swap 
-controller to swap ownership of the item. Once the swap had gone through the successful transaction field would increment by one for both
+controller to swap ownership of the item. Once the swap had gone through the successfull transction field would increment by one for both
 parties who had traded items.   
 
 
@@ -212,7 +206,7 @@ def add_item_to_offer(item1_id, item2_id):
 
 ### Front End
 
-Once the back end had been completed we started working on the front end, each member of the group started working on their own
+Once the back end had been completed we started working on the front end, each member of the group started working on thier own
 components. The items page consists of all the items mapped out onto bulma cards, which when clicked will take you to that items page.
 The layout of the single item page consists of the image of the item on the left, And the information about the item on the right.
 
@@ -282,10 +276,10 @@ async function Offer(offeredItemid) {
 
 
 
-## Key learnings 
+## Thoughts 
 
-Project-4 had began a week and a half after we had first started learning about Python and flask, in that week and a half we also learnt about SQL databases and how it differed from noSQL databases like Mongodb and the possibilities of what we were able to build.
-It was a tough but thoroughly enjoyable experience to build something with a new stack of technology.
+Project-4 had began a week and a half after we had first started learning about Python and flask, in that week and a half we also learnt about SQL databases and how it differed from noSQL databases like Mongodb and the posibilites of what we were able to bulid.
+It was a tough but thoroughly enjoyable experince to build something with a new stack of technology.
 
 
 ### Improvements 

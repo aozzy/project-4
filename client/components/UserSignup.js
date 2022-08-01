@@ -77,8 +77,8 @@ export default function UserSignup({ history }) {
       console.log({ err })
     }
   }
-  
-  // console.log(errors)
+  console.log(formData)
+  console.log(errors)
 
   return <div className="main">
 
