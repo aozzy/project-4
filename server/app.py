@@ -4,9 +4,10 @@ from config.environment import db_URI
 from flask_marshmallow import Marshmallow
 from flask_bcrypt import Bcrypt
 
+
 app = Flask(__name__, static_folder='dist')
 
-from decorators import logging, errors, logger
+# from decorators import logging, errors, logger
 
 app.config['SQLALCHEMY_DATABASE_URI'] = db_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -36,3 +37,6 @@ def catch_all(path):
         return app.send_static_file(path)
 
     return app.send_static_file('index.html') 
+
+
+

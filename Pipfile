@@ -12,6 +12,7 @@ marshmallow-sqlalchemy = "*"
 flask-bcrypt = "*"
 pytest = "*"
 pyjwt = "*"
+waitress = "*"
 
 [dev-packages]
 

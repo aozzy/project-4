@@ -5,14 +5,14 @@ from models.comment import Comment
 from serializers.comment import CommentSchema
 from decorators.secure_route import secure_route
 from decorators.time_taken import time_taken
-from decorators.logging import logging
+from decorators.loggings import logging
 
 item_schema = ItemSchema()
 comment_schema = CommentSchema()
 
 from marshmallow.exceptions import ValidationError
 
-router = Blueprint(__name__, "items")
+router = Blueprint("items" ,__name__)
 
 #GET items
 @router.route("/items", methods=["GET"])

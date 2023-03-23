@@ -5,7 +5,7 @@ from marshmallow.exceptions import ValidationError
 from decorators.secure_route import secure_route
 
 image_schema = ImageSchema()
-router = Blueprint(__name__, 'images')
+router = Blueprint('images' ,__name__)
 
 #GET all images
 

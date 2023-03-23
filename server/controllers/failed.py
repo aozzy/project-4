@@ -5,15 +5,15 @@ from serializers.item import ItemSchema
 from models.comment import Comment
 from serializers.user import UserSchema
 from models.user import User
-from decorators.logging import logging
+from decorators.loggings import logging
 from decorators.secure_route import secure_route
 from decorators.time_taken import time_taken
-from decorators.logging import logging
+
 
 item_schema = ItemSchema()
 user_schema = UserSchema()
 
-router = Blueprint(__name__, "failed")
+router = Blueprint("failed" ,__name__)
 
 
 @router.route("/failed/<int:item1_id>/<int:item2_id>", methods=["PUT"])

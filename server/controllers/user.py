@@ -11,7 +11,7 @@ from decorators.secure_route import secure_route
 user_schema = UserSchema()
 comment_schema = CommentSchema()
 
-router = Blueprint(__name__, "users")
+router = Blueprint("users",__name__)
 
 #POST new user (Signup)
 

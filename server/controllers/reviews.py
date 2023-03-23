@@ -14,7 +14,7 @@ user_schema = UserSchema()
 comment_schema = CommentSchema()
 review_schema = ReviewSchema()
 
-router = Blueprint(__name__, "reviews")
+router = Blueprint("reviews" ,__name__)
 
 
 @router.route("/reviews", methods=["GET"])
